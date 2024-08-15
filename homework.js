@@ -110,7 +110,12 @@
 // Array7. n ta elementdan tashkil topgan berilgan. Massiv elementlarini 1 ta o'rin ongga siklik siljituvchi programma tuzilsin. a[0] element qiymati a[1] ga o'tadi, a[1] esa a[2] ga, ..., a[n – 1] qiymati a[0] ga o'tadi.
 // Input: [1, 5, 8, 9, 10]
 // Output: [5, 8, 9, 10, 1]
+// let arr = [9, 43, 1, 5, 8, 9, 10, 2, 3, 4];
 
+// let firstIndex = arr.shift();
+// arr.push(firstIndex);
+
+// console.log(arr);
 //! UYGA VAZIFA
 
 // Array1. n natural soni berilgan. 2 sonining dastlabki n ta darajasidan tashkil topgan massivni qaytaruvchi getLevel2(n) nomli funksiya tuzing.
