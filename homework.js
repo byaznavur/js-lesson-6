@@ -203,19 +203,69 @@
 // }
 
 // Array7. n ta elementdan tashkil topgan massiv berilgan (n juft son). Massiv elementlari orasidan quyidagilarini chiqaruvchi programma tuzilsin. A[n-1], A[n-3], ... A[1]. Shart operatori ishlatilmasin.
-let arr = [2, 3, 4, 5, 6, 7];
-let len = arr.length;
+// let arr = [2, 3, 4, 5, 6, 7];
+// let len = arr.length;
 
-for (let i = 0; i < len / 2; i++) {
-  console.log(arr[len - 2 * i - 1]);
-}
+// for (let i = 0; i < len / 2; i++) {
+//   console.log(arr[len - 2 * i - 1]);
+// }
 
 // Array8. n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juft indekslilarini keyin toq indekslilarini chiqaruvchi programma tuzilsin.
 // A[0], A[2], A[4], ... A[1], A[3], A[5],.... Shart operatori ishlatilmasin.
+// let arr = [1, 2, 3, 5, 6, 7];
+// let even = [];
+// let odd = [];
 
+// let len = arr.length;
+// for (let i = 0; i < Math.floor(len / 2); i++) {
+//   even.push(arr[2 * i]);
+//   odd.push(arr[2 * i + 1]);
+// }
+
+// console.log(...even, ...odd);
 // Array9. n ta elementdan tashkil topgan massiv berilgan (n juft son). Dastlab massiv elementlari orasidan toq indekslilarini o'shish tartibida keyin juft indekslilarini kamayish tartibida chiqaruvchi programma tuzilsin. A[1], A[3], A[5],.. A[6], A[4], A[2], A[0]. Shart operatori ishlatilmasin.
+// let arr = [1, 2, 3, 5, 6, 7];
+// let even = [];
+// let odd = [];
 
-// Array10. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini quyidagicha chiqaruvchi programma tuzilsin. A[0], A[1], A[n-1], A[n-2], A[2], A[3], A[n-3], A[n-4], ...
+// let len = arr.length;
+// for (let i = 0; i < Math.floor(len / 2); i++) {
+//   even.push(arr[2 * i]);
+//   odd.push(arr[2 * i + 1]);
+// }
+
+// console.log(...odd, ...even.reverse());
+// Array10. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini quyidagicha chiqaruvchi programma tuzilsin.  A[0] ,A[1], A[n-1], A[n-2], A[2], A[3], A[n-3], A[n-4], ...
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// let len = arr.length;
+
+// let start = 0;
+// let end = len - 1;
+
+// while (start <= end) {
+//   console.log(arr[start]);
+//   start += 2;
+//   if (start <= end) {
+//     console.log(arr[end]);
+//     end -= 2;
+//   }
+// }
+// ! = 2
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// let len = arr.length;
+// let start = 0;
+// let end = len - 1;
+// let chunkSize = 2;
+// while (start <= end) {
+//   for (let i = 0; i < chunkSize && start <= end; i++) {
+//     console.log(arr[start]);
+//     start++;
+//   }
+//   for (let i = 0; i < chunkSize && start <= end; i++) {
+//     console.log(arr[end]);
+//     end--;
+//   }
+// }
 
 // Array11. N ta elementdan tashkil topgan arr nomli massiv va K, L butun sonlari berilgan. (0 <= K <= L < N). Massivning K va L indekslari orasidagi elementlaridan tashqari elementlari yig'indisini qaytaruvchi rangeOutSum(arr) nomli funksiya tuzilsin.
 //
