@@ -205,8 +205,9 @@
 // Array7. n ta elementdan tashkil topgan massiv berilgan (n juft son). Massiv elementlari orasidan quyidagilarini chiqaruvchi programma tuzilsin. A[n-1], A[n-3], ... A[1]. Shart operatori ishlatilmasin.
 let arr = [2, 3, 4, 5, 6, 7];
 let len = arr.length;
-for (let i = 0; i < arr.length; i++) {
-  console.log(arr[len - (2 * i - 1)]);
+
+for (let i = 0; i < len / 2; i++) {
+  console.log(arr[len - 2 * i - 1]);
 }
 
 // Array8. n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juft indekslilarini keyin toq indekslilarini chiqaruvchi programma tuzilsin.
