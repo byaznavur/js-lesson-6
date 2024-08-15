@@ -120,25 +120,94 @@
 
 // Array1. n natural soni berilgan. 2 sonining dastlabki n ta darajasidan tashkil topgan massivni qaytaruvchi getLevel2(n) nomli funksiya tuzing.
 // Input: 5
-// Output: [2, 4, 16, 32, 62]
+// Output: [2, 4, 8 , 16, 32, 64]
 
+// function getLevel2(n) {
+//   let arr = [];
+//   for (let i = 1; i <= n; i++) {
+//     let res = 2 ** i;
+//     arr.push(res);
+//   }
+
+//   return arr;
+// }
+
+// let a = getLevel2(5);
+
+// console.log(a);
 // Array2. n natural soni va A, B butun sonlari berilgan (n > 2). a[0] = A; a[1] = B; boshqa elementlari o'zidan oldingi barcha elementlari yig'indisiga teng bo'lgan massivni hosil qiling va elementlarini chiqaring.
 // Input: n = 5, A = 2, B = 3
 // Output: [2, 3, 5, 10, 20]
 
-// Array3. n ta elementdan tashkil topgan massiv berilgan. Uning elementlarini teskari tartibda chiqaruvchi programma tuzilsin.
+// function createArray(n, A, B) {
+//   let arr = [A, B];
 
+//   for (let i = 2; i < n; i++) {
+//     let sum = 0;
+//     for (let j = 0; j < i; j++) {
+//       sum += arr[j];
+//     }
+//     arr.push(sum);
+//   }
+
+//   return arr;
+// }
+// console.log(createArray(5, 2, 3));
+
+// Array3. n ta elementdan tashkil topgan massiv berilgan. Uning elementlarini teskari tartibda chiqaruvchi programma tuzilsin.
+// let arr = [2, 4, 8, 16, 32, 64];
+// let res = arr.reverse();
+
+// console.log(res);
 // Array4. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan toqlarini indekslari o'sish tartibida chiqaruvchi va ularning sonini chiqaruvchi programma tuzilsin.
 // Massiv elementlar: 4 5 7 8 6 9
 // Natija: 5 7 9 toqlar soni = 3
 
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let res = " ";
+
+// let sum = 0;
+// for (let el of arr) {
+//   if (el % 2 !== 0) {
+//     res += el + " ";
+//     sum++;
+//   }
+// }
+// console.log(res);
+
+// console.log(sum);
 // Array5. n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juftlarini indekslari o'sish tartibida chiqaruvchi, keyin massiv elementlari orasidan toqlarini indekslari kamayish tartibida chiqaruvchi programma tuzilsin.
 // Massiv elementlar: 4 5 7 8 6 9
 // Natija: 4 8 6 9 7 5
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let res = [];
+// let oddArr = [];
+// let evenArr = [];
+// for (let el of arr) {
+//   if (el % 2 == 0) {
+//     oddArr.push(el);
+//   }
+//   if (el % 2 != 0) {
+//     evenArr.push(el);
+//   }
+// }
+// res.push(...evenArr.reverse(), ...oddArr);
+// console.log(res);
 
 // Array6. n ta elementdan tashkil topgan massiv berilgan (n juft son). Massiv elementlari orasidan quyidagilarini chiqaruvchi programma tuzilsin. A[0], A[2], A[4], ... Shart operatori ishlatilmasin.
 
+// let arr = [2, 3, 4, 5, 6, 7];
+// let newArr = [];
+// for (let i = 0; i < arr.length; i += 2) {
+//   console.log(arr[i]);
+// }
+
 // Array7. n ta elementdan tashkil topgan massiv berilgan (n juft son). Massiv elementlari orasidan quyidagilarini chiqaruvchi programma tuzilsin. A[n-1], A[n-3], ... A[1]. Shart operatori ishlatilmasin.
+let arr = [2, 3, 4, 5, 6, 7];
+let len = arr.length;
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[len - (2 * i - 1)]);
+}
 
 // Array8. n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juft indekslilarini keyin toq indekslilarini chiqaruvchi programma tuzilsin.
 // A[0], A[2], A[4], ... A[1], A[3], A[5],.... Shart operatori ishlatilmasin.
