@@ -267,27 +267,141 @@
 //   }
 // }
 
-// Array11. N ta elementdan tashkil topgan arr nomli massiv va K, L butun sonlari berilgan. (0 <= K <= L < N). Massivning K va L indekslari orasidagi elementlaridan tashqari elementlari yig'indisini qaytaruvchi rangeOutSum(arr) nomli funksiya tuzilsin.
+//! Array11. N ta elementdan tashkil topgan arr nomli massiv va K, L butun sonlari berilgan. (0 <= K <= L < N). Massivning K va L indekslari orasidagi elementlaridan tashqari elementlari yig'indisini qaytaruvchi rangeOutSum(arr) nomli funksiya tuzilsin.
 //
 // Array12. Massivga kiritilgan qiymatlardan truthy va falsy elementlaridan iborat alohida 2 ta massiv hosil qiling.
 // Input: [10, false, “”, “Abdulaziz”, null]
 // Output:
 // Truthy: [10, “Abdulaziz”]
-// Falsy: [false, “”, null]
+// Falsy: [false, “”, null]\
 
+// let arr = [10, false, "", "Abdulaziz", null];
+
+// let arrTruthy = [];
+// let arrFalsy = [];
+// for (let i of arr) {
+//   if (i) {
+//     arrTruthy.push(i);
+//   } else {
+//     arrFalsy.push(i);
+//   }
+// }
+
+// console.log(arrFalsy);
+// console.log(arrTruthy);
 // Array13. n ta elementdan tashkil topgan arr nomli massiv berilgan. Massiv juft indeksli elementlari orasidan kichigini aniqlovchi getOddMin(arr) nomli funksiya tuzilsin.
 
+// let arr = [8, 3, 2, 9, 2, 5, 89];
+
+// function getOddMin(arr) {
+//   let min = arr[0];
+//   for (let i = 0; i < arr.length; i += 2) {
+//     if (arr[i] < min) {
+//       min = arr[i];
+//     }
+//   }
+//   return min;
+// }
+
+// let res = getOddMin(arr);
+// console.log(res);
+
 // Array14. n ta elementdan tashkil topgan arr nomli massiv berilgan. Massiv toq indeksli elementlari orasidan kattasini aniqlovchi getEvenMax(arr) tuzilsin.
+// let arr = [8, 3, 2, 9, 2, 5, 89];
+
+// function getEvenMax(arr) {
+//   let max = arr[1];
+//   for (let i = 1; i < arr.length; i += 2) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+
+//   return max;
+// }
+
+// let res = getEvenMax(arr);
+// console.log(res);
 
 // Array15. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan oxirgi lokal maksimum elementi indeksini chiqaruvchi programma tuzilsin. Lokal maksimum - o'ng va chap qo'shinisidan katta bo'lgan element.
+// let arr = [2, 4, 5, 3, 9, 8, 12, 13, 15, 6, 7];
+// let lastLocalMaxIndex = -1;
 
+// for (let i = 1; i < arr.length - 1; i++) {
+//   if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+//     lastLocalMaxIndex = i;
+//   }
+// }
+
+// console.log(lastLocalMaxIndex);
 // Array16. n ta elementdan tashkil topgan massiv va R butun soni berilgan. Massiv elementlari orasidan R soniga eng yaqin sonni topuvchi programma tuzilsin.
+// let arr = [4, 5, 3, 9, 8, 12, 13, 15, 6, 7];
+// let R = 4;
+
+// let closest = arr[0];
+// let minDifference = Math.abs(R - arr[0]);
+
+// for (let i = 1; i < arr.length; i++) {
+//   let currentDifference = Math.abs(R - arr[i]);
+//   if (currentDifference < minDifference) {
+//     minDifference = currentDifference;
+//     closest = arr[i];
+//   }
+// }
+
+// console.log(closest); // Natija: 4
 
 // Array17. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan yig'indisi eng katta bo'ladigan 2 ta qo'shni elementni chiqaruvchi programma tuzilsin.
+// let arr = [4, 5, 3, 9, 8, 12, 13, 15, 6, 7];
+
+// let maxSum = arr[0] + arr[1];
+// let index = 0;
+
+// for (let i = 1; i < arr.length - 1; i++) {
+//   let sum = arr[i] + arr[i + 1];
+//   if (sum > maxSum) {
+//     maxSum = sum;
+//     index = i;
+//   }
+// }
+
+// console.log(
+//   `Eng katta yig'indiga ega bo'lgan qo'shni elementlar: ${arr[index]} va ${
+//     arr[index + 1]
+//   }`
+// );
+// console.log(`Yig'indisi: ${maxSum}`);
 
 // Array18. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasida aniq 2 ta bir xil qiymatli element bor. Shu bir xil qiymatli elementlar indeksini chiqaruvchi programma tuzilsin.
 
 // Array19. n ta elementdan tashkil topgan massiv berilgan. Massivda eng ko'p qatnashgan bir xil qiymatli elementni va uning sonini chiqaruvchi programma tuzilsin.
+let arr = [3, 7, 3, 2, 9, 3, 7, 9, 7, 9, 9];
+
+let maxCount = 0; // Eng ko'p uchragan elementning sonini saqlash uchun
+let mostFrequentElement; // Eng ko'p uchragan elementni saqlash uchun
+
+for (let i = 0; i < arr.length; i++) {
+  // Massivdagi har bir elementni ko'rib chiqish
+  let currentCount = 0; // Hozirgi elementning sonini saqlash uchun
+
+  for (let j = 0; j < arr.length; j++) {
+    // Hozirgi elementni (arr[i]) boshqa barcha elementlar bilan solishtirish
+    if (arr[i] === arr[j]) {
+      // Agar hozirgi element (arr[i]) boshqa bir element bilan teng bo'lsa (arr[j]), sonini oshiramiz
+      currentCount++;
+    }
+  }
+
+  // Agar hozirgi element soni eng ko'p bo'lsa, maxCount va mostFrequentElement o'zgaruvchilarini yangilaymiz
+  if (currentCount > maxCount) {
+    maxCount = currentCount;
+    mostFrequentElement = arr[i];
+  }
+}
+
+console.log(
+  `Eng ko'p uchragan element: ${mostFrequentElement}, soni: ${maxCount}`
+);
 
 // Array20. n ta elementdan iborat butun sonlardan tashkil topgan a massiv berilgan. a massivning juft elementlaridan tashkil topgan b massivini hosil qiling. b massiv elementlari soni va elementlari chiqarilsin.
 
