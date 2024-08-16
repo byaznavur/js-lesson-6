@@ -375,35 +375,35 @@
 // Array18. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasida aniq 2 ta bir xil qiymatli element bor. Shu bir xil qiymatli elementlar indeksini chiqaruvchi programma tuzilsin.
 
 // Array19. n ta elementdan tashkil topgan massiv berilgan. Massivda eng ko'p qatnashgan bir xil qiymatli elementni va uning sonini chiqaruvchi programma tuzilsin.
-let arr = [3, 7, 3, 2, 9, 3, 7, 9, 7, 9, 9];
+// let arr = [3, 7, 3, 2, 9, 3, 7, 9, 7, 9, 9];
 
-let maxCount = 0; // Eng ko'p uchragan elementning sonini saqlash uchun
-let mostFrequentElement; // Eng ko'p uchragan elementni saqlash uchun
+// let maxCount = 0; // Eng ko'p uchragan elementning sonini saqlash uchun
+// let mostFrequentElement; // Eng ko'p uchragan elementni saqlash uchun
 
-for (let i = 0; i < arr.length; i++) {
-  // Massivdagi har bir elementni ko'rib chiqish
-  let currentCount = 0; // Hozirgi elementning sonini saqlash uchun
+// for (let i = 0; i < arr.length; i++) {
+//   // Massivdagi har bir elementni ko'rib chiqish
+//   let currentCount = 0; // Hozirgi elementning sonini saqlash uchun
 
-  for (let j = 0; j < arr.length; j++) {
-    // Hozirgi elementni (arr[i]) boshqa barcha elementlar bilan solishtirish
-    if (arr[i] === arr[j]) {
-      // Agar hozirgi element (arr[i]) boshqa bir element bilan teng bo'lsa (arr[j]), sonini oshiramiz
-      currentCount++;
-    }
-  }
+//   for (let j = 0; j < arr.length; j++) {
+//     // Hozirgi elementni (arr[i]) boshqa barcha elementlar bilan solishtirish
+//     if (arr[i] === arr[j]) {
+//       // Agar hozirgi element (arr[i]) boshqa bir element bilan teng bo'lsa (arr[j]), sonini oshiramiz
+//       currentCount++;
+//     }
+//   }
 
-  // Agar hozirgi element soni eng ko'p bo'lsa, maxCount va mostFrequentElement o'zgaruvchilarini yangilaymiz
-  if (currentCount > maxCount) {
-    maxCount = currentCount;
-    mostFrequentElement = arr[i];
-  }
-}
+// Agar hozirgi element soni eng ko'p bo'lsa, maxCount va mostFrequentElement o'zgaruvchilarini yangilaymiz
+//   if (currentCount > maxCount) {
+//     maxCount = currentCount;
+//     mostFrequentElement = arr[i];
+//   }
+// }
 
-console.log(
-  `Eng ko'p uchragan element: ${mostFrequentElement}, soni: ${maxCount}`
-);
+// console.log(
+//   `Eng ko'p uchragan element: ${mostFrequentElement}, soni: ${maxCount}`
+// );
 
-// Array20. n ta elementdan iborat butun sonlardan tashkil topgan a massiv berilgan. a massivning juft elementlaridan tashkil topgan b massivini hosil qiling. b massiv elementlari soni va elementlari chiqarilsin.
+//! Array20. n ta elementdan iborat butun sonlardan tashkil topgan a massiv berilgan. a massivning juft elementlaridan tashkil topgan b massivini hosil qiling. b massiv elementlari soni va elementlari chiqarilsin.
 
 // Array21. n ta butun sonlardan iborat a massiv va k butun soni berilgan. Massivning har bir elementini k ga orttiruvchi programma tuzilsin.
 
