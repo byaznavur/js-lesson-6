@@ -30,13 +30,13 @@
 
 // arr3
 
-// let arr = [4, 5, 7, 8, 6, 9];
+let arr = [4, 5, 7, 8, 6, 9];
 
-// let len = arr.length;
+let len = arr.length;
 
-// for (let i in arr) {
-//   console.log(arr[i], arr[len - i - 1]);
-// }
+for (let i in arr) {
+  console.log(arr[i], arr[len - i - 1]);
+}
 
 // arr4
 
