@@ -1,5 +1,7 @@
 //? DARSDA KO’RILISHI KERAK BO’LGAN MASALALAR
 
+const { array } = require("prop-types");
+
 //! Array1. n natural soni berilgan. Dastlabki n ta toq sondan tashkil topgan massiv qaytaruvchi getInitialOdds(n) nomli funksiya tuzing.
 // Input: getInitialOdds(5)
 // Output: [1, 3, 5, 7, 9]
@@ -38,19 +40,84 @@
 // Input: 5
 // Output: [2, 4, 16, 32, 62]
 
+// function getLevel2(n) {
+//   let arr = [];
+
+//   for (let i = 0; i <= n; i++) {
+//     arr.push(Math.pow(2, i));
+//   }
+
+//   return arr;
+// }
+
+// const res = getLevel2(5);
+
+// console.log(res);
+
 //! Array2. n natural soni va A, B butun sonlari berilgan (n > 2). a[0] = A; a[1] = B; boshqa elementlari o'zidan oldingi barcha elementlari yig'indisiga teng bo'lgan massivni hosil qiling va elementlarini chiqaring.
 // Input: n = 5, A = 2, B = 3
 // Output: [2, 3, 5, 10, 20]
 
+// function getArray(n, A, B) {
+//   let arr = [A, B];
+//   for (let i = 2; i < n; i++) {
+//     let sum = 0;
+//     for (let j = 0; j < i; j++) {
+//       sum += arr[j];
+//     }
+//     arr.push(sum);
+//   }
+//   return arr;
+// }
+// let res = getArray(5, 2, 3);
+// console.log(res); // Output: [2, 3, 5, 10, 20]
+
 //! Array3. n ta elementdan tashkil topgan massiv berilgan. Uning elementlarini teskari tartibda chiqaruvchi programma tuzilsin.
+
+// function reverseArray(arr) {
+//   return arr.reverse();
+// }
+// let arr = [2, 4, 16, 32, 62];
+// reverseArray(arr);
 
 //! Array4. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan toqlarini indekslari o'sish tartibida chiqaruvchi va ularning sonini chiqaruvchi programma tuzilsin.
 // Massiv elementlar: 4 5 7 8 6 9
 // Natija: 5 7 9 toqlar soni = 3
 
+// function getEvenNum(arr) {
+//   let evenArr = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 !== 0) {
+//       evenArr.push(arr[i]);
+//     }
+//   }
+//   return evenArr;
+// }
+// let arr = [4, 5, 7, 8, 6, 9];
+// let evenArr = getEvenNum(arr);
+// console.log(evenArr);
 //! Array5. n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juftlarini indekslari o'sish tartibida chiqaruvchi, keyin massiv elementlari orasidan toqlarini indekslari kamayish tartibida chiqaruvchi programma tuzilsin.
 // Massiv elementlar: 4 5 7 8 6 9
 // Natija: 4 8 6 9 7 5
+
+// function getOddEvenNum(arr) {
+//   let oddArr = [];
+//   let evenArr = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       evenArr.push(arr[i]);
+//     } else {
+//       oddArr.push(arr[i]);
+//     }
+//   }
+
+//   return [...oddArr, ...evenArr];
+// }
+// let arr = [2, 3, 8, 9, 4];
+// const res = getOddEvenNum(arr);
+// console.log(res);
 
 //! Array6. n ta elementdan tashkil topgan massiv berilgan (n juft son). Massiv elementlari orasidan quyidagilarini chiqaruvchi programma tuzilsin. A[0], A[2], A[4], ... Shart operatori ishlatilmasin.
 
@@ -107,4 +174,4 @@
 // Input: [1, 5, 6, 1, 5, 7, 2]
 // Output: [6, 7, 2]
 
-//! Array30. arr nomli massivda k qiymatli bir nech element mavjude. Shu elementlar indekslari massividan iborat qiymat qaytaruvchid searchAllElements(arr) nomli funksiya hosil qiling !
+//! Array30. arr nomli massivda k qiymatli bir nech element mavjud. Shu elementlar indekslari massividan iborat qiymat qaytaruvchid searchAllElements(arr) nomli funksiya hosil qiling !
