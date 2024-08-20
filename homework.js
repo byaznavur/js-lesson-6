@@ -133,12 +133,12 @@ const { array } = require("prop-types");
 //! Array8. n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juft indekslilarini keyin toq indekslilarini chiqaruvchi programma tuzilsin.
 // A[0], A[2], A[4], ... A[1], A[3], A[5],.... Shart operatori ishlatilmasin.
 // let arr = [1, 2, 3, 4, 5, 6, 8, 9, 10, 11];
-for (let i = 0; i < arr.length; i += 2) {
-  console.log(arr[i] + " Juft index");
-}
-for (let i = 1; i < arr.length; i += 2) {
-  console.log(arr[i] + " Toq index");
-}
+// for (let i = 0; i < arr.length; i += 2) {
+//   console.log(arr[i] + " Juft index");
+// }
+// for (let i = 1; i < arr.length; i += 2) {
+//   console.log(arr[i] + " Toq index");
+// }
 
 //! Array9. n ta elementdan tashkil topgan massiv berilgan (n juft son). Dastlab massiv elementlari orasidan toq indekslilarini o'shish tartibida keyin juft indekslilarini kamayish tartibida chiqaruvchi programma tuzilsin. A[1], A[3], A[5],.. A[6], A[4], A[2], A[0]. Shart operatori ishlatilmasin.
 // let arr = [1, 2, 3, 4, 5, 6, 8, 9, 10, 11];
@@ -167,17 +167,75 @@ for (let i = 1; i < arr.length; i += 2) {
 
 //! Array11. N ta elementdan tashkil topgan arr nomli massiv va K, L butun sonlari berilgan. (0 <= K <= L < N). Massivning K va L indekslari orasidagi elementlaridan tashqari elementlari yig'indisini qaytaruvchi rangeOutSum(arr) nomli funksiya tuzilsin.
 //
+// function rangeOutSum(arr, K, L) {
+//   let sum = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i < K || i > L) {
+//       sum += arr[i];
+//     }
+//   }
+
+//   return sum;
+// }
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// let K = 2;
+// let L = 5;
+// console.log(rangeOutSum(arr, K, L));
+
 //! Array12. Massivga kiritilgan qiymatlardan truthy va falsy elementlaridan iborat alohida 2 ta massiv hosil qiling.
 // Input: [10, false, “”, “Abdulaziz”, null]
 // Output:
 // Truthy: [10, “Abdulaziz”]
 // Falsy: [false, “”, null]
 
+// let arr = [10, false, "", "Abdulaziz", null];
+// let arr1 = [];
+// let arr2 = [];
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i]) {
+//     arr1.push(arr[i]);
+//   } else {
+//     arr2.push(arr[i]);
+//   }
+// }
+
+// console.log(arr1);
 //! Array13. n ta elementdan tashkil topgan arr nomli massiv berilgan. Massiv juft indeksli elementlari orasidan kichigini aniqlovchi getOddMin(arr) nomli funksiya tuzilsin.
+// let arr = [3, 2, 8, 3, 4, 2, 5, 6];
 
+// let min = arr[0];
+// for (let i = 0; i < arr.length; i += 2) {
+//   if (arr[i] < min) {
+//     min = arr[i];
+//   }
+// }
+
+// console.log(min);
 //! Array14. n ta elementdan tashkil topgan arr nomli massiv berilgan. Massiv toq indeksli elementlari orasidan kattasini aniqlovchi getEvenMax(arr) tuzilsin.
+// function getEvenMax(arr) {
+//   let max = arr[0];
+//   for (let i = 1; i < arr.length; i += 2) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
 
+//   return max;
+// }
+
+// let arr = [3, 2, 8, 3, 4, 2, 5, 6];
+// let res = getEvenMax(arr);
+
+// console.log(res);
 //! Array15. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan oxirgi lokal maksimum elementi indeksini chiqaruvchi programma tuzilsin. Lokal maksimum - o'ng va chap qo'shinisidan katta bo'lgan element.
+// let arr = [3, 2, 8, 3, 4, 2, 5, 6];
+
+// for (let i = 1; i < arr.length - 1; i++) {
+//   if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+//     console.log(arr[i], i);
+//   }
+// }
 
 //! Array16. n ta elementdan tashkil topgan massiv va R butun soni berilgan. Massiv elementlari orasidan R soniga eng yaqin sonni topuvchi programma tuzilsin.
 
