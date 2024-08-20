@@ -238,17 +238,86 @@ const { array } = require("prop-types");
 // }
 
 //! Array16. n ta elementdan tashkil topgan massiv va R butun soni berilgan. Massiv elementlari orasidan R soniga eng yaqin sonni topuvchi programma tuzilsin.
+// let arr = [4, 2, 8, 3, 4, 2, 5, 6];
+// let R = 6;
+// let minLine = Math.abs(arr[0] - R);
+// let closestValue = arr[0]; // R ga eng yaqin qiymatni saqlash uchun
+
+// for (let i = 1; i < arr.length; i++) {
+//   let diff = Math.abs(arr[i] - R);
+//   if (diff < minLine) {
+//     minLine = diff;
+//     closestValue = arr[i]; // R ga eng yaqin qiymatni yangilash
+//   }
+// }
+
+// console.log(closestValue); // Eng yaqin qiymatni chiqarish
 
 //! Array17. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan yig'indisi eng katta bo'ladigan 2 ta qo'shni elementni chiqaruvchi programma tuzilsin.
+// let arr = [4, 2, 8, 3, 4, 2, 5, 6];
+
+// Dastlabki eng katta yig'indi va mos elementlarni olish
+// let maxSum = arr[0] + arr[1];
+// let maxNum = arr[0];
+// let maxNum1 = arr[1];
+
+// for (let i = 0; i < arr.length - 1; i++) { // Tsikl oxirgi elementga yetib borguncha ishlaydi
+//   let sum = arr[i] + arr[i + 1]; // Joriy element va keyingi elementning yig'indisi
+//   if (sum > maxSum) {
+//     maxSum = sum;
+//     maxNum = arr[i];
+//     maxNum1 = arr[i + 1];
+//   }
+// }
+
+// console.log(maxNum);   // Birinchi element
+// console.log(maxNum1);  // Ikkinchi element
+// console.log(maxSum);   // Eng katta yig'indi
 
 //! Array18. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasida aniq 2 ta bir xil qiymatli element bor. Shu bir xil qiymatli elementlar indeksini chiqaruvchi programma tuzilsin.
+// let arr = [4, 1, 8, 3, 4, 2, 5, 6];
+
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i + 1; j < arr.length; j++) {
+//     if (arr[i] === arr[j]) {
+//       console.log(i, j);
+//       break; // Birinchi moslikni topgandan so'ng chiqamiz
+//     }
+//   }
+// }
 
 //! Array19. n ta elementdan tashkil topgan massiv berilgan. Massivda eng ko'p qatnashgan bir xil qiymatli elementni va uning sonini chiqaruvchi programma tuzilsin.
+// let arr = [4, 2, 8, 3, 4, 2, 5, 6];
 
+// let count = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i + 1; j < arr.length; j++) {
+//     if (arr[i] === arr[j]) {
+//       console.log(i, j);
+//       count++;
+//       break; // Birinchi moslikni topgandan so'ng chiqamiz
+//     }
+//   }
+// }
+
+// console.log(count);
 //! Array20. n ta elementdan iborat butun sonlardan tashkil topgan a massiv berilgan. a massivning juft elementlaridan tashkil topgan b massivini hosil qiling. b massiv elementlari soni va elementlari chiqarilsin.
+// let arr = [4, 2, 8, 3, 4, 2, 5, 6];
+// let resArr = [];
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] % 2 == 0) {
+//     resArr.push(arr[i]);
+//   }
+// }
 
+// console.log(resArr);
 //! Array21. n ta butun sonlardan iborat a massiv va k butun soni berilgan. Massivning har bir elementini k ga orttiruvchi programma tuzilsin.
-
+// let arr = [4, 2, 8, 3, 4, 2, 5, 6];
+// let k = 2;
+// for (let i = 0; i < arr.length; i++) {
+//   arr[i] = arr[i] * k;
+// }
+// console.log(arr);
 //! Array22. n ta elementdan iborat massiv berilgan (n juft son). Massivning birinchi yarmi va ikkinchi yarmi qiymatlari almashtirilsin.
 
 //! Array23. n ta elementdan iborat massiv berilgan. Massivning elementlari teskari tartibda joylashtirilsin. (DIQQAT: Sizdan teskari tartibda chiqarish talab qilinayotgani yo'q. a[0] element a[n-1] bilan almashsin, va hakazo, teskari tartibda joylashtirish talab qilinyapti)
