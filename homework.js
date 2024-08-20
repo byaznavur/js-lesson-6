@@ -320,20 +320,97 @@ const { array } = require("prop-types");
 // console.log(arr);
 //! Array22. n ta elementdan iborat massiv berilgan (n juft son). Massivning birinchi yarmi va ikkinchi yarmi qiymatlari almashtirilsin.
 
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8]; // Misol massiv
+// let n = arr.length;
+// let firstHalf = arr.slice(0, n / 2);
+// let secondHalf = arr.slice(n / 2);
+// let newArr = secondHalf.concat(firstHalf);
+// console.log(newArr);
+
 //! Array23. n ta elementdan iborat massiv berilgan. Massivning elementlari teskari tartibda joylashtirilsin. (DIQQAT: Sizdan teskari tartibda chiqarish talab qilinayotgani yo'q. a[0] element a[n-1] bilan almashsin, va hakazo, teskari tartibda joylashtirish talab qilinyapti)
 
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+let n = arr.length;
+
+for (let i = 0; i < n / 2; i++) {
+  let temp = arr[i]; // Birinchi elementni saqlab qo'yamiz
+  arr[i] = arr[n - 1 - i]; // Birinchi element o'rniga teskari indeksdagi elementni qo'yamiz
+  arr[n - 1 - i] = temp; // Teskari indeksdagi element o'rniga saqlangan elementni qo'yamiz
+}
+
+console.log(arr); // [8, 7, 6, 5, 4, 3, 2, 1]
+
 //! Array24. n ta butun sonlardan iborat a massiv berilgan. Massivning eng kichik va eng katta elementlari orasidagilarini nolga almashtiruvchi programma tuzilsin. Eng kichik va eng katta elementlari o'zgarishsiz qoldirilsin.
+// let arr = [3, 1, 4, 5, 2, 6, 7];
+// let minIndex = arr.indexOf(Math.min(...arr));
+// let maxIndex = arr.indexOf(Math.max(...arr));
+
+// if (minIndex > maxIndex) {
+//   [minIndex, maxIndex] = [maxIndex, minIndex]; // min va max indekslarini almashtirish
+// }
+
+// for (let i = minIndex + 1; i < maxIndex; i++) {
+//   arr[i] = 0;
+// }
+
+// console.log(arr); // [3, 1, 0, 0, 0, 6, 7]
 
 //! Array25. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini bir qadam chapga siklik siljituvchi programma tuzilsin. a[n-1] element qiymati a[n-2] ga o'tadi, a[n-2] esa a[n-3] ga, ... a[0] esa a [n-1] ga o'tadi.
+// let arr = [1, 2, 3, 4, 5];
+// let firstElement = arr.shift(); // Birinchi elementni olib tashlash
+// arr.push(firstElement); // Uni oxiriga qo'shish
+
+// console.log(arr); // [2, 3, 4, 5, 1]
 
 //! Array26. n ta elementdan tashkil topgan massiv va k butun soni berilgan (0<= k < n). Indeksi k ga teng bo'lgan elementni o'chiruvchi va yangi massiv qaytaruvchi deleteElementWithIndex(arr, k) nomli funksiya tuzilsin.
+// function deleteElementWithIndex(arr, k) {
+//   return arr.slice(0, k).concat(arr.slice(k + 1));
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// console.log(deleteElementWithIndex(arr, 2)); // [1, 2, 4, 5]
 
 //! Array27. n ta elementdan tashkil topgan massiv va k, m butun sonlari berilgan (0< k < m < n). Indeksi k dan m gacha bo'lgan elementlarni o'chiruvchi programma tuzilsin. Hosil bo'lgan massiv elementlar soni va elementlari chiqarilsin.
+// function deleteElementsInRange(arr, k, m) {
+//   let newArr = arr.slice(0, k).concat(arr.slice(m + 1));
+//   console.log('Elementlar soni:', newArr.length);
+//   return newArr;
+// }
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(deleteElementsInRange(arr, 2, 5)); // [1, 2, 7]
 
 //! Array28. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan bir xil qo'shnilarning birini o'chiruvchi programma tuzilsin.
+// let arr = [1, 1, 2, 3, 3, 4, 5, 5];
+// let newArr = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] !== arr[i + 1]) {
+//     newArr.push(arr[i]);
+//   }
+// }
+
+// console.log(newArr); // [1, 2, 3, 4, 5]
 
 //! Array29. n ta elementdan tashkil topgan arr nomli massiv berilgan. Massiv elementlari orasidan faqat 1 marta ishtirok etganlaridan iborat yangi massiv qaytaruvchi getElementsOneTime(arr) nomli funksiya tuzing.
 // Input: [1, 5, 6, 1, 5, 7, 2]
 // Output: [6, 7, 2]
+// function getElementsOneTime(arr) {
+//   return arr.filter(item => arr.indexOf(item) === arr.lastIndexOf(item));
+// }
+// let arr = [1, 5, 6, 1, 5, 7, 2];
+// console.log(getElementsOneTime(arr)); // [6, 7, 2]
 
 //! Array30. arr nomli massivda k qiymatli bir nech element mavjud. Shu elementlar indekslari massividan iborat qiymat qaytaruvchid searchAllElements(arr) nomli funksiya hosil qiling !
+// function searchAllElements(arr, k) {
+//   let indices = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === k) {
+//       indices.push(i);
+//     }
+//   }
+//   return indices;
+// }
+// let arr = [1, 5, 6, 1, 5, 7, 2, 5];
+// let k = 5;
+// console.log(searchAllElements(arr, k)); // [1, 4, 7]
